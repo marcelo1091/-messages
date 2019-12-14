@@ -14,7 +14,7 @@ if (!isset($_SESSION['user'])) {
 
 		<div class="chatbox">
 
-			<form id="myForm" action="" method="POST">
+			<form class="messagesform" action="" method="POST">
 				<textarea oninput="auto_grow(this)" class="textareaMes" id="message" name="message" placeholder="Wiadomość..."></textarea>
 				<button type="button" class="send-btn btn btn-primary " onclick=hide_element()>Wyślij</button>
 			</form>
