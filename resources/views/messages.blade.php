@@ -37,7 +37,7 @@ if (!isset($_SESSION['user'])) {
 		function hide_element() {
 			var message = $('#message').val();
 			if(message != '')
-		$.post('/handlers/ajax?action=SendMessage&message='+message, function(response){
+		$.post('/handlers/ajax.php?action=SendMessage&message='+message, function(response){
 		
 		loadChat();
 		$('#message').val('');
@@ -53,7 +53,7 @@ if (!isset($_SESSION['user'])) {
 
 			if( e.which == 13 ){
 
-				$.post('/handlers/ajax?action=SendMessage&message='+message, function(response){
+				$.post('/handlers/ajax.php?action=SendMessage&message='+message, function(response){
 					
 					loadChat();
 					$('#message').val('');
@@ -68,7 +68,7 @@ if (!isset($_SESSION['user'])) {
 
 		function loadChat()
 		{
-			var x = $.post('/handlers/ajax?action=getChat', function(response){
+			var x = $.post('/handlers/ajax.php?action=getChat', function(response){
 				
 				$('.chathistory').html(response);
 				

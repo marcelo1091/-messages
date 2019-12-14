@@ -11,9 +11,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-	header("Location: /resources/views/login.blade");
+	header("Location: /resources/views/login.blade.php");
 }else{
-	header("Location: /resources/views/messages.blade");
+	header("Location: /resources/views/messages.blade.php");
 }
 ?>
 

@@ -8,6 +8,6 @@ if (isset($_REQUEST['reg'])) {
 
     $query->execute([$_REQUEST['name'], $_REQUEST['password']]);
 
-    header("Location: /resources/views/login.blade");
+    header("Location: /resources/views/login.blade.php");
 }
 ?>
