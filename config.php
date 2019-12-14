@@ -1,6 +1,6 @@
 <?php
 
-	$dbhost = "localhosta";
+	$dbhost = "localhost";
 	$dbname = "mes";
 	$dbuser = "root";
 	$dbpass = '';
