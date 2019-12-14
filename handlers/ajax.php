@@ -27,7 +27,7 @@ if( isset($_REQUEST['action']) ){
 
 		case "getChat":
 
-
+			session_start();
 			$query = $db->prepare("SELECT * from chat ORDER BY id DESC LIMIT 30");
 			$query->execute();
 
@@ -36,17 +36,16 @@ if( isset($_REQUEST['action']) ){
 
 			$chat = '';
 			foreach( $rs as $r ){
-
-				$chat .=  '<div class="siglemessage"><strong>'.$r->user.' says:  </strong>'.$r->message.'<br>'.$r->date.'</div>';
-
+				if($r->user == $_SESSION['user'])
+				$chat .=  '<div class="siglemessageMe">'.$r->message.'</div>';
+				else
+				$chat .=  '<div class="siglemessage">'.$r->message.'</div>';
 			}
 
 			echo $chat;
 
 
 		break;
-
-
 
 	}
 

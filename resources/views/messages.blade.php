@@ -10,26 +10,28 @@ if (!isset($_SESSION['user'])) {
 
 	<div class="centeralised">
 	
-	<div class="chathistory" id="mes"></div>
+		<div class="chathistory" id="mes"></div>
 
-	<div class="chatbox">
+		<div class="chatbox">
 
-		<form id="myForm" action="" method="POST">
-			
-			<textarea class="txtarea" id="message" name="message"></textarea>
+			<form id="myForm" action="" method="POST">
+				<textarea oninput="auto_grow(this)" class="textareaMes" id="message" name="message"></textarea>
 
-		</form>
+			</form>
 
-		<button type="button" class="btn btn-primary" onclick=hide_element()>Wyślij</button>
+			<button type="button" class="btn btn-primary" onclick=hide_element()>Wyślij</button>
 
-	</div>
+		</div>
 
 	</div>
 
 
 	<script>
 
-
+		function auto_grow(element) {
+			element.style.height = "20px";
+			element.style.height = (element.scrollHeight)+"px";
+		}
 
 		$(document).ready(function(){
 			loadChat();
@@ -69,13 +71,12 @@ if (!isset($_SESSION['user'])) {
 
 		function loadChat()
 		{
-			$.post('/handlers/ajax.php?action=getChat', function(response){
+			var x = $.post('/handlers/ajax.php?action=getChat', function(response){
 				
 				$('.chathistory').html(response);
-
+				
 			});
 		}
-
 
 		setInterval(function(){
 			loadChat();
