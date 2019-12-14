@@ -4,7 +4,7 @@
 
 <div class="loginContainer">
     <h1>Login</h1>
-    <form action="/app/auth/login.php" method="post">
+    <form action="/app/auth/login" method="post">
         <input type="text" name="name">
         <input type="password" name="password">
         <input class="btn btn-primary" type="submit" name="log" value="Login">

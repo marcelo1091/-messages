@@ -37,9 +37,9 @@ if( isset($_REQUEST['action']) ){
 			$chat = '';
 			foreach( $rs as $r ){
 				if($r->user == $_SESSION['user'])
-				$chat .=  '<div class="siglemessageMe">'.$r->message.'</div>';
+				$chat .=  '<div class="siglemessageMe"><small>'.$r->user.' : </small><br>'.$r->message.'</div>';
 				else
-				$chat .=  '<div class="siglemessage">'.$r->message.'</div>';
+				$chat .=  '<div class="siglemessage"><small>'.$r->user.' : </small><br>'.$r->message.'</div>';
 			}
 
 			echo $chat;

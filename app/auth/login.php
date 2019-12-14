@@ -14,9 +14,9 @@ if( isset($_REQUEST['log']) ){
 
             $_SESSION['user'] = $r->first_name;
         }
-           header("Location: /index.php");
+           header("Location: /index");
     }else{
-    header("Location: /resources/views/login.blade.php");
+    header("Location: /resources/views/login.blade");
     }
 }
 ?>
