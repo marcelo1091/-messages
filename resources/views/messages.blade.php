@@ -10,7 +10,7 @@ if (!isset($_SESSION['user'])) {
 
 	<div class="centeralised">
 	
-	<div class="chathistory"></div>
+	<div class="chathistory" id="mes"></div>
 
 	<div class="chatbox">
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['user'])) {
 
 		</form>
 
-		<button onclick=hide_element()>Wyślij</button>
+		<button type="button" class="btn btn-primary" onclick=hide_element()>Wyślij</button>
 
 	</div>
 
@@ -28,6 +28,7 @@ if (!isset($_SESSION['user'])) {
 
 
 	<script>
+
 
 
 		$(document).ready(function(){

@@ -28,7 +28,7 @@ if( isset($_REQUEST['action']) ){
 		case "getChat":
 
 
-			$query = $db->prepare("SELECT * from chat");
+			$query = $db->prepare("SELECT * from chat ORDER BY id DESC LIMIT 30");
 			$query->execute();
 
 			$rs = $query->fetchAll(PDO::FETCH_OBJ);

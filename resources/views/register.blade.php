@@ -7,5 +7,5 @@
 <form action="../../app/auth/register.php" method="post">
     <input type="text" name="name">
     <input type="password" name="password">
-    <input type="submit" name="reg" value="Register">
+    <input class="btn btn-primary" type="submit" name="reg" value="Register">
 </form>
