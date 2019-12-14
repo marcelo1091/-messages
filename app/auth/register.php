@@ -1,5 +1,5 @@
 <?php
-include("../../config.php");
+include($_SERVER['DOCUMENT_ROOT']."/config.php");
 
 if (isset($_REQUEST['reg'])) {
     session_start();
@@ -8,6 +8,6 @@ if (isset($_REQUEST['reg'])) {
 
     $query->execute([$_REQUEST['name'], $_REQUEST['password']]);
 
-    header("Location: ../../resources/views/login.blade.php");
+    header("Location: /resources/views/login.blade.php");
 }
 ?>

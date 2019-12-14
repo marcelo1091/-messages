@@ -1,6 +1,6 @@
 <?php
 
-include("../../config.php");
+include($_SERVER['DOCUMENT_ROOT']."/config.php");
 
 if( isset($_REQUEST['log']) ){
     $query = $db->prepare("SELECT * from users WHERE first_name ='".$_REQUEST['name']."' AND pass ='".$_REQUEST['password']."'");
@@ -14,7 +14,7 @@ if( isset($_REQUEST['log']) ){
 
             $_SESSION['user'] = $r->first_name;
         }
-           header("Location: /messages/index.php");
+           header("Location: /index.php");
     }else{
     header("Location: login.blade.php");
     }

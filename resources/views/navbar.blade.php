@@ -23,14 +23,14 @@
         <ul class="navbar-nav ml-auto">
             <?php if(isset($_SESSION['user'])):?>
                 <li class="nav-item">
-                    <a class="nav-link" href="/messages/app/auth/logout.php">Wyloguj</a>
+                    <a class="nav-link" href="/app/auth/logout.php">Wyloguj</a>
                 </li>
             <?php else:?>
                 <li class="nav-item">
-                    <a class="nav-link" href="/messages/resources/views/login.blade.php">Logowanie</a>
+                    <a class="nav-link" href="/resources/views/login.blade.php">Logowanie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/messages/resources/views/register.blade.php">Rejstracja</a>
+                    <a class="nav-link" href="/resources/views/register.blade.php">Rejstracja</a>
                 </li>
             <?php endif?>  
         </ul>

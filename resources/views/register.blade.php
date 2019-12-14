@@ -1,5 +1,5 @@
 <?php 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/messages/resources/inc/header.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/resources/inc/header.php');
 ?>
 
 <h1>Register</h1>

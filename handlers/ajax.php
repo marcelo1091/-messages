@@ -1,6 +1,6 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT']."/messages/config.php");
+include($_SERVER['DOCUMENT_ROOT']."/config.php");
 
 if( isset($_REQUEST['action']) ){
 

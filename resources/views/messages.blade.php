@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/messages/resources/inc/header.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/resources/inc/header.php');
 
 if (!isset($_SESSION['user'])) {
 	echo"zaloguj się ";
@@ -37,7 +37,7 @@ if (!isset($_SESSION['user'])) {
 		function hide_element() {
 			var message = $('#message').val();
 			if(message != '')
-		$.post('/messages/handlers/ajax.php?action=SendMessage&message='+message, function(response){
+		$.post('/handlers/ajax.php?action=SendMessage&message='+message, function(response){
 		
 		loadChat();
 		$('#message').val('');
@@ -53,7 +53,7 @@ if (!isset($_SESSION['user'])) {
 
 			if( e.which == 13 ){
 
-				$.post('/messages/handlers/ajax.php?action=SendMessage&message='+message, function(response){
+				$.post('/handlers/ajax.php?action=SendMessage&message='+message, function(response){
 					
 					loadChat();
 					$('#message').val('');
@@ -68,7 +68,7 @@ if (!isset($_SESSION['user'])) {
 
 		function loadChat()
 		{
-			$.post('/messages/handlers/ajax.php?action=getChat', function(response){
+			$.post('/handlers/ajax.php?action=getChat', function(response){
 				
 				$('.chathistory').html(response);
 
